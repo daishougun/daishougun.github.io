@@ -31,3 +31,8 @@ jobs:
       with:
         name: flake8-flake8_report
         path: flake8_report.txt    
+
+    - name: Run flake8 and save report
+      run:
+        flake8 . > flake8_report.txt || true
+        cat flake8_report.txt
